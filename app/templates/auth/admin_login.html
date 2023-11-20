@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Identify Yourself</title>
+	<meta charset='utf-8'>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, pre-check=0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel='stylesheet' filename="login.css"  version=1.1 href="/static/login.css">
+
+</head>
+<body>
+		<nav>
+			<div id='safe-logo'>
+				<div id="around-text">
+					<p>SAFE</p>
+				</div>	
+			</div>
+		</nav>
+					<p><div class="around-link-back"><a href="{{ url_for('auth.userprofile') }}">Back</a></div></p>
+		<p class="instructions"> Please provide your credentials.</p>
+		<form action="" method="post" novalidate>
+		
+			{% with message = get_flashed_messages() %}
+				{% if message  %}
+					<span id="error-message">{{ message }}</span>
+				{%  endif %}
+			{% endwith  %}
+			
+			{{ form.hidden_tag() }}
+			<p>
+				{{ form.username.label    }}<br>
+				{{ form.username(size=32) }}<br>
+				{% for error in form.username.errors %}
+					<span class = "error-message">{{ error }}</span><br>
+				{% endfor %}
+				{{ form.password.label    }}<br>
+				{{ form.password(size=32) }}<br>
+				{% for error in form.password.errors %}
+					<span class = "error-message">{{ error }}</span><br>
+				{% endfor %}
+				{{ form.otp.label    	  }}<br>
+				{{ form.otp(size=6)       }}<br>
+				{% for error in form.otp.errors %}
+					<span class = "error-message">{{ error }}</span><br>
+				{% endfor %}
+				{{ form.submit()          }}<br>
+			</p>
+		</form>
+</body>
+</html>

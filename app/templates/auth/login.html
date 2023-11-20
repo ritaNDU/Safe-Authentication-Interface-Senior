@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Identify Yourself</title>
+	<meta charset='utf-8'>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, pre-check=0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+
+	<link rel='stylesheet' filename="login.css"  version=1.1 href="/static/login.css">
+
+</head>
+<body>
+		<nav>
+			<div id='safe-logo'>
+				<div id="around-text">
+					<p>SAFE</p>
+				</div>	
+			</div>
+		</nav>
+		<p class="instructions"> Please provide your credentials.</p>
+		<form action="" method="post" novalidate>
+		
+			{% with message = get_flashed_messages() %}
+				{% if message  %}
+					{% for m in message %}
+						<span>{{ m }}<br></span>
+					{% endfor %}
+				{%  endif %}
+			{% endwith  %}
+			
+			{{ form.hidden_tag() }}
+			<p><br>
+				{{ form.username.label    }}<br>
+				{{ form.username(size=32) }}<br>
+				{% for error in form.username.errors %}
+					<span class = "error-message">{{ error }}</span><br>
+				{% endfor %}
+				{{ form.password.label    }}<br>
+				{{ form.password(size=32) }}<br>
+				{% for error in form.password.errors %}
+					<span class = "error-message">{{ error }}</span><br>
+				{% endfor %}
+				{{ form.submit()          }}<br>
+			</p>
+			<p id="password-reset">
+				Forgot Your Password? <br>
+				<a href="{{ url_for('auth.reset_password_request') }}">Click here to reset it...</a> 
+			</p>
+		</form>
+</body>
+</html>

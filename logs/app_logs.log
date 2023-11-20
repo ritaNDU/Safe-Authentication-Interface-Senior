@@ -1,0 +1,106 @@
+[2021-04-15 13:02:53,465] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:21:05,169] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:21:14,149] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:21:14,278] None requested None
+ INFO in safeinterface: A shell session has started. [in /home/rita/Desktop/Senior/SafeInterface-Final/safeinterface.py:11]
+[2021-04-17 13:23:19,341] 127.0.0.1 requested https://127.0.0.1:5000/auth/login
+ INFO in routes: mango tried to log in 1 times. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:75]
+[2021-04-17 13:23:49,057] 127.0.0.1 requested https://127.0.0.1:5000/auth/login
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:83]
+[2021-04-17 13:23:49,408] 127.0.0.1 requested https://127.0.0.1:5000/auth/userprofile
+ ERROR in app: Exception on /auth/userprofile [GET] [in /home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask_limiter/extension.py", line 702, in __inner
+    return obj(*a, **k)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py", line 28, in userprofile
+    user_locked_out = UserLockedOut.query.filter_by(username = user.username).first()
+NameError: name 'user' is not defined
+[2021-04-17 13:24:49,916] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:26:48,541] 127.0.0.1 requested https://127.0.0.1:5000/auth/login?next=%2Fauth%2Fuserprofile
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:83]
+[2021-04-17 13:26:48,882] 127.0.0.1 requested https://127.0.0.1:5000/auth/userprofile
+ ERROR in app: Exception on /auth/userprofile [GET] [in /home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2021-04-17 13:28:12,336] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:28:30,368] 127.0.0.1 requested https://127.0.0.1:5000/auth/login?next=%2Fauth%2Fuserprofile
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:81]
+[2021-04-17 13:28:39,319] 127.0.0.1 requested https://127.0.0.1:5000/auth/logout
+ INFO in routes: mango has logged out. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:258]
+[2021-04-17 13:28:51,574] 127.0.0.1 requested https://127.0.0.1:5000/auth/login
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:81]
+[2021-04-17 13:29:59,125] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:30:30,619] 127.0.0.1 requested https://127.0.0.1:5000/auth/login?next=%2Fauth%2Fuserprofile
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:83]
+[2021-04-17 13:30:30,958] 127.0.0.1 requested https://127.0.0.1:5000/auth/userprofile
+ ERROR in app: Exception on /auth/userprofile [GET] [in /home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2021-04-17 13:33:09,343] 127.0.0.1 requested https://127.0.0.1:5000/auth/userprofile
+ ERROR in app: Exception on /auth/userprofile [GET] [in /home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2021-04-17 13:33:13,129] 127.0.0.1 requested https://127.0.0.1:5000/auth/userprofile
+ ERROR in app: Exception on /auth/userprofile [GET] [in /home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/home/rita/Desktop/Senior/SafeInterface/venv/lib/python3.6/site-packages/flask/app.py", line 2098, in make_response
+    "The view function did not return a valid response. The"
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+[2021-04-17 13:33:42,883] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:34:36,668] None requested None
+ INFO in __init__: Safe Interface Startup [in /home/rita/Desktop/Senior/SafeInterface-Final/app/__init__.py:99]
+[2021-04-17 13:35:04,830] 127.0.0.1 requested https://127.0.0.1:5000/auth/login?next=%2Fauth%2Fuserprofile
+ INFO in routes: mango logged in. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:84]
+[2021-04-17 13:35:40,001] 127.0.0.1 requested https://127.0.0.1:5000/auth/logout
+ INFO in routes: mango has logged out. [in /home/rita/Desktop/Senior/SafeInterface-Final/app/auth/routes.py:261]

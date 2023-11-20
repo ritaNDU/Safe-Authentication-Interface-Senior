@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, precheck=0">
+	<link rel="stylesheet" filename="user_profile.css" version=2.0 href="/static/user_profile.css"> 
+
+	<title>Welcome {{ user.name }}</title>
+</head>
+<body>
+	<nav>
+		{% if admin_mode %}
+			<div id='around-logout'>
+				<p id="logout"> <a href="{{ url_for('auth.degrade') }}">Degrade</a></p>
+			</div>	
+		{% else %}
+			<div id='around-logout'>
+				<p id="logout"> <a href="{{ url_for('auth.logout') }}">Log Out</a></p>
+			</div>	
+		{% endif %}
+	</nav>
+	<div class="container">
+	{% if admin and not admin_mode %}
+		<div id='username-admininfo'>
+			<p id="admin-mode"><a href="{{ url_for('auth.transition') }}">Admin Mode</a></p>	
+		</div>
+	{% endif %}
+		<div id="welcome-info">
+			<p id="welcome">Welcome {{ user.name }}</p>
+			<div id="info">
+				<p>Username:<span id="username">{{ user.username }} </span></p>
+				<p>Name:<span id="name">{{ user.name }}</span></p>
+				<p>Status:<span id="status">{{ status }}</span></p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p id="contact-me">Contact me on: {{ user.email }} </p>
+	</footer>
+</body>
+</html>

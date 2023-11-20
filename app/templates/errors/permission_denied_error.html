@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, precheck=0">
+
+	<link rel="stylesheet" type="text/css" href="/static/errors.css">
+	
+	<title>Permission Denied</title>
+</head>
+<body>
+	<nav>
+		<div id='safe-logo'>
+			<div id="around-text">
+				<p>SAFE</p>
+			</div>	
+		</div>
+	</nav>
+	<div id="content">
+		<h1>Permission denied</h1>
+		<p> Access to this page is restricted!</p>
+		<p><div id="around-link-back"><a href="{{ url_for('auth.degrade') }}">Back</a></div></p>
+	</div>
+</body>
+</html>

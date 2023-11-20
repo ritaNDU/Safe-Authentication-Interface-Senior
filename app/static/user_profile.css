@@ -1,0 +1,115 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+/* Start Header */
+nav{
+	height: 145px;
+	background: #FF6961;
+	box-shadow: 1px 1px 2px gray;
+}
+#around-logout{
+	margin-left: 5%;
+	margin-top: 0.1%;
+	position: relative;
+
+	height: 140px;
+	width: 140px;
+
+	border-radius: 110px;
+	box-shadow: 1px 1px 5px gray;
+
+	background: red;
+}
+#logout{
+	font-size: 1.4em;
+
+	position: absolute;
+	top: 54px;
+	left: 24px;
+}
+#logout a{
+	color: white;
+	text-shadow: 1px 1px 2px gray;
+	text-decoration: none;
+	font-style: none;
+}
+/* End Header */
+
+/* Start username-admininfo Section*/
+#username-admininfo{
+	margin-top: 1%;
+	margin-left: 5.7%;
+}
+#admin-mode{
+	position: relative;
+	/* Font related */
+	color: white;
+	font-size: 1.3em;
+	text-shadow: 1px 1px 2px gray;
+	/* Box related */
+	background: red;
+	height: 100px;
+	width: 145px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 3px gray;
+}
+#admin-mode a{
+	color:white;
+	text-decoration: none;
+	position: absolute;
+	top: 38.5%;
+	left: 6%;
+}
+/* End username-admininfo Section*/
+
+.container{
+	position: relative;
+}
+/* Start welcome-info Section */
+#welcome-info{
+	margin-left: 40%;
+	position: absolute;
+	top: 1%;
+}
+#welcome{
+	font-size: 2.5em;
+}
+#info{
+	margin-top: 17%;
+	margin-left: 7%;
+
+	padding: 5%;
+	border: 1px solid black;
+	border-radius: 15px;
+
+	box-shadow: 1px 1px 1px gray;
+}
+#info > p{
+	margin-top: 5%;
+}
+#info p{
+	font-size: 1.1em;
+	margin-left: 2%;
+	margin-bottom: 5%;
+}
+#username{
+	margin-left: 23%;
+}
+#name, #status{
+	margin-left: 40%;
+}
+/* End welcome-info Section */
+
+/* Start Footer */
+footer{
+	position: absolute;
+	bottom: 1.5%;
+	left: 5.5%;
+}
+#contact-me{
+
+}
+/* End Footer */

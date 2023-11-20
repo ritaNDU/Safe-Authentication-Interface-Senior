@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, precheck=0">
+
+	<link rel="stylesheet" type="text/css" href="/static/transitions.css">
+	
+	<title>Transition</title>
+</head>
+<body>
+	<nav>
+		<div id='safe-logo'>
+			<div id="around-text">
+				<p>SAFE</p>
+			</div>	
+		</div>
+	</nav>
+	<div id="content">
+		<h1>Please, Log in to your email before proceeding...</h1>
+		<p><div class="around-link-back"><a href="{{ url_for('auth.adminlogin') }}">Done</a></div></p>
+		<p><div class="around-link-back"><a href="{{ url_for('auth.userprofile') }}">Back</a></div></p>
+	</div>
+</body>
+</html>

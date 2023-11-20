@@ -1,0 +1,9 @@
+Dear {{ admin.username }},
+The following token has been generated for your use to login to your account. 
+
+{{ admin.otp.token }}
+
+If you have not been trying to acccess your account, and are receiving this message, means that someone is trying to access your account! 
+
+Sincerely,
+The Safe User Interface Team
