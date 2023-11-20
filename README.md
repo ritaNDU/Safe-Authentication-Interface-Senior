@@ -1,3 +1,5 @@
 # Safe-Authentication-Interface-Senior
 
-This is my Senior Project for Fall 2020 Semester. I am planning on creating a safe authentication interface, to a web application. I am also going to construct a tiny MySQL Database where user info and credentials are going to be stored, which I am going to prroperly secure.
+This is my Senior Project for Spring 2021 Semester.
+
+This is a Safe Authentication Interface that is protected against the top 10 most common vulnerabilities that are found in web apps according to the OWASP.
